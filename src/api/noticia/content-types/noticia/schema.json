@@ -13,14 +13,18 @@
   "pluginOptions": {},
   "attributes": {
     "titulo": {
-      "type": "string"
+      "type": "string",
+      "unique": true,
+      "required": true
     },
     "slug": {
       "type": "uid",
       "targetField": "titulo"
     },
     "subtitulo": {
-      "type": "string"
+      "type": "string",
+      "required": true,
+      "minLength": 11
     },
     "descripcion": {
       "type": "text"
@@ -66,14 +70,15 @@
       "target": "api::category.category"
     },
     "imagenPrincipal": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     }
   }
 }
