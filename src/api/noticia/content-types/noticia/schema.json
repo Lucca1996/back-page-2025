@@ -22,9 +22,10 @@
       "targetField": "titulo"
     },
     "subtitulo": {
-      "type": "string",
+      "type": "text",
       "required": true,
-      "minLength": 11
+      "minLength": 11,
+      "maxLength": 200
     },
     "descripcion": {
       "type": "text"

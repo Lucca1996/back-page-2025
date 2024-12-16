@@ -527,9 +527,10 @@ export interface ApiNoticiaNoticia extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
     slug: Schema.Attribute.UID<'titulo'>;
-    subtitulo: Schema.Attribute.String &
+    subtitulo: Schema.Attribute.Text &
       Schema.Attribute.Required &
       Schema.Attribute.SetMinMaxLength<{
+        maxLength: 200;
         minLength: 11;
       }>;
     titulo: Schema.Attribute.String &
